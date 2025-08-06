@@ -1,109 +1,95 @@
-/* estilos/antigua.css */
+/*
+ * Estilos personalizados para el sitio web de La Antigua Guatemala.
+ * Sobrescribe estilos de Bootstrap para un diseño temático.
+ */
+
+/* Paleta de colores personalizada */
+:root {
+  --bs-primary: #8d6e63;
+  --bs-secondary: #5d4037;
+  --bs-dark: #3e2723;
+  --bs-light: #efebe9;
+  --bs-body-bg: #f8f0e3;
+  --bs-body-color: #444;
+  --bs-border-color: #ddd;
+}
 
 body {
-    font-family: 'Georgia', serif;
-    background-color: #f8f0e3; /* Tono beige suave */
-    color: #444;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
+  font-family: 'Georgia', serif;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  line-height: 1.6;
 }
 
-header {
-    background-color: #5d4037; /* Marrón oscuro */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    border-bottom: 5px solid #4e342e;
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.2em;
-}
-
-h2 {
-    color: #3e2723; /* Marrón más oscuro */
-    border-bottom: 2px solid #3e2723;
-    padding-bottom: 5px;
-    margin-top: 25px;
-}
-
-nav {
-    background-color: #efebe9;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 0;
-}
-
-nav li {
-    display: inline;
-    margin: 0 15px;
+h1, h2 {
+  color: var(--bs-dark);
 }
 
 a {
-    color: #3e2723;
-    text-decoration: none;
-    font-weight: bold;
+  color: var(--bs-dark);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 a:hover {
-    color: #8d6e63;
-    text-decoration: underline;
+  color: var(--bs-primary);
+  text-decoration: underline;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+.table {
+  border-collapse: collapse;
+  margin-top: 15px;
 }
 
-blockquote {
-    font-style: italic;
-    color: #6a6a6a;
-    border-left: 3px solid #8d6e63;
-    padding-left: 15px;
-    margin: 15px 0;
+.table th, .table td {
+  border: 1px solid var(--bs-border-color);
 }
 
-table {
+.table thead th {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+/* Estilo para unificar el tamaño de las imágenes en las tarjetas */
+.card-img-top-fixed {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* Estilo para el navbar */
+.navbar {
+  background-color: var(--bs-dark) !important;
+  border-bottom: 5px solid #4e342e;
+}
+.navbar-brand, .navbar-nav .nav-link {
+    font-weight: bold;
+    color: var(--bs-light) !important;
+}
+.navbar-nav .nav-link:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Estilo para los tabs */
+.nav-tabs .nav-link.active {
+    background-color: var(--bs-light);
+    color: var(--bs-dark) !important;
+    border-color: var(--bs-dark) var(--bs-dark) var(--bs-light) var(--bs-dark);
+}
+
+.nav-tabs .nav-link {
+    color: var(--bs-secondary);
+}
+
+/* Estilo para la capa semitransparente del hero */
+.bg-image {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-
-th {
-    background-color: #8d6e63;
-    color: white;
-}
-
-img {
-    border: 3px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-}
-
-img:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
-}
-
-footer {
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #5d4037;
-    color: white;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
 }
