@@ -1,52 +1,31 @@
-# Página Web: Excursión a La Antigua Guatemala
+# Excursión a La Antigua Guatemala
 
-Este proyecto es una página web informativa desarrollada con **HTML y CSS**. Su propósito es promocionar una excursión a la histórica ciudad de La Antigua Guatemala, utilizando estilos sencillos para una presentación más atractiva.
+Este proyecto es una página web informativa para promocionar una excursión a la histórica ciudad de La Antigua Guatemala. El sitio web fue desarrollado como parte de un ejercicio académico para demostrar el uso de componentes de Bootstrap 5 y la personalización de estilos CSS.
 
----
+## Tecnologías Utilizadas
 
-## Contenido de la Página
+- **HTML5:** Para la estructura del contenido.
+- **CSS3:** Para estilos personalizados y sobreescritura de los estilos de Bootstrap.
+- **Bootstrap 5:** Para el diseño responsivo y el uso de componentes predefinidos.
 
-La página web incluye los siguientes elementos clave:
-* Un título principal atractivo.
-* Una descripción breve del lugar turístico, incluyendo su ubicación y características.
-* Un índice de contenidos que permite la navegación rápida entre secciones.
-* Una galería con cuatro imágenes representativas de La Antigua.
-* Una tabla detallando el itinerario de la excursión.
-* Una lista de actividades adicionales que se pueden realizar.
-* Un pie de página que indica el nombre del desarrollador de la página.
+## Características Principales
 
----
+El sitio web consta de tres páginas principales (`Inicio`, `Atracciones` y `Alojamiento`) y utiliza los siguientes componentes de Bootstrap:
 
-## Estilo y Diseño
+- **Navbar:** Barra de navegación responsiva para una fácil navegación.
+- **Hero Section:** Sección principal en la página de inicio con una imagen de fondo y texto superpuesto.
+- **Cards:** Se utilizan en las páginas de `Inicio` y `Alojamiento` para mostrar información de forma estructurada.
+- **Carousel:** Carrusel de imágenes en la página de `Atracciones` para presentar los puntos turísticos más importantes.
+- **Tabs:** En la página de `Inicio`, para organizar la descripción y el itinerario de la excursión.
+- **Modal:** Un formulario de contacto emergente en la página de `Alojamiento`.
+- **Estilos Personalizados:** Los colores y la tipografía han sido adaptados para crear un tema que evoca la atmósfera colonial de La Antigua.
 
-El diseño de la página se gestiona a través de un archivo de estilos externo, lo cual permite una apariencia organizada y consistente.
-
-* El archivo **`estilos/antigua.css`** define la tipografía, los colores, el fondo y el diseño de los elementos principales como títulos, tablas e imágenes.
-
----
-
-## Cómo Ver el Proyecto
-
-Para visualizar esta página web, sigue estos pasos:
-1.  Asegúrate de que el archivo `antigua_excursion.html` y las carpetas `imagenes` y `estilos` estén ubicadas en la misma raíz de tu proyecto.
-2.  Haz doble clic en el archivo `antigua_excursion.html`. Este se abrirá automáticamente en tu navegador web predeterminado.
-
----
-
-## Tecnología Utilizada
-
-Este proyecto fue desarrollado utilizando:
-* **HTML5** para toda la estructura y el contenido.
-* **CSS3** para el estilo y el diseño de la página.
-
----
 
 ## Desarrollado por
 
 Norman Gustavo Rodas García - 9490-15-7703
 
----
 
 ## Link del Sitio
 
-https://effortless-twilight-fe6191.netlify.app/
+https://marvelous-fudge-0bbc3b.netlify.app/
