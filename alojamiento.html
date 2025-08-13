@@ -80,20 +80,28 @@
                 </div>
                 <div class="modal-body">
                     <p>Déjanos tus datos y te enviaremos una lista de opciones de hoteles y hostales disponibles para tu viaje a La Antigua.</p>
-                    <form>
+                    <form id="formulario-contacto">
                         <div class="mb-3">
                             <label for="nombreInput" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="nombreInput">
+                            <input type="text" class="form-control" id="nombreInput" required>
                         </div>
                         <div class="mb-3">
-                            <label for="emailInput" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="emailInput">
+                            <label for="fechaNacimientoInput" class="form-label">Fecha de nacimiento</label>
+                            <input type="date" class="form-control" id="fechaNacimientoInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Correo electrónico</label>
+                            <input type="email" class="form-control" id="emailInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensajeTextarea" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensajeTextarea" rows="3" required></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
                         </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Enviar</button>
                 </div>
             </div>
         </div>
@@ -104,5 +112,50 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const form = document.getElementById('formulario-contacto');
+        const contactModal = document.getElementById('contactModal');
+        const modalInstance = new bootstrap.Modal(contactModal);
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById('nombreInput').value;
+            const fechaNacimiento = document.getElementById('fechaNacimientoInput').value;
+            const email = document.getElementById('emailInput').value;
+            const mensaje = document.getElementById('mensajeTextarea').value;
+
+            // Validación de campos completos
+            if (!nombre || !fechaNacimiento || !email || !mensaje) {
+                alert('Por favor, completa todos los campos.');
+                return;
+            }
+
+            // Validación de formato de correo electrónico
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Por favor, ingresa un formato de correo electrónico válido.');
+                return;
+            }
+
+            // Si todo es válido:
+            // 1. Mostrar los datos en la consola
+            console.log('Datos del formulario:');
+            console.log('Nombre:', nombre);
+            console.log('Fecha de Nacimiento:', fechaNacimiento);
+            console.log('Correo Electrónico:', email);
+            console.log('Mensaje:', mensaje);
+
+            // 2. Ocultar el modal de contacto
+            modalInstance.hide();
+
+            // 3. Mostrar un mensaje de éxito
+            alert('¡Formulario enviado con éxito!');
+            
+            // 4. Resetear el formulario
+            form.reset();
+        });
+    </script>
 </body>
 </html>
